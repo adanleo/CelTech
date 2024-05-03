@@ -7,106 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CellTech</title>
     <style>
+        footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        }
         a:hover {
             opacity: 0.6;
         }
     </style>
 </head>
 
-<body style="background-color:#fffffe; font-family:  proxima-nova, sans-serif; color: #2a2a2a ">
+<body style="background-color:#fffffe; font-family:  proxima-nova, sans-serif; color: #2a2a2a; position: relative; min-height: 100vh;">
     <header id="Inicio" style="background-color: #eff0f3; padding: 10px; overflow: hidden;">
       <a href="#" style="float: left"><img src="Assets/CELTECH.png" alt="Logo" width="130px" height="90px"/></a>
       <nav style="float: right; padding: 20px; padding-top: 40px;">
         <a href="#Inicio" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Inicio</a>
-        <a href="#quienes-somos"style="color: #001e1d; text-decoration: none; padding-right: 25px;">Acerca de</a>
-        <a href="#contacto" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Contacto</a>
-        <a href="#Registro" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Registrese</a>
-        <a href="#Sucursales" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Sucursales</a>
+        <a href="Pages/quienes somos.html"style="color: #001e1d; text-decoration: none; padding-right: 25px;">Acerca de</a>
+        <a href="Pages/contacto.html" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Contacto</a>
+        <a href="Pages/usuario.html" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Registrese</a>
+        <a href="Pages/sucursales.html" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Sucursales</a>
       </nav>
     </header>
 
     <div style="display: inline-block;  white-space: nowrap;">
       <img src="Assets/Primera-Hero.png" alt="celular" style="max-width: 50%; height: auto; vertical-align: top; margin-top: 0% ;margin-right: 20px;">
       <p style="font-size: 25px; max-width: 50%; display: inline-block; padding-top: 350px;">
-          ACA LE MANDAMOS FRUTA; DESPUES ME MANDAN =D
+          <a href="Pages/productos_destacados.html" style="background-color: aqua; color: #001e1d; text-decoration: none; padding-right: 25px;">Ofertas</a>
       </p>
   </div>
-
-  <section id="quienes-somos">
-    <h2>Quiénes Somos</h2>
-    <p>Somos una empresa líder en la venta de celulares online, comprometidos con ofrecer productos de calidad y un excelente servicio al cliente. Nuestra pasión por la tecnología nos impulsa a estar siempre a la vanguardia en el mercado, ofreciendo a nuestros clientes las últimas novedades en telefonía móvil.</p>
-    <p>En <strong>CelTech</strong>, nos enorgullecemos de nuestro equipo altamente capacitado y comprometido, que trabaja día a día para satisfacer las necesidades de nuestros clientes y brindarles una experiencia de compra única y satisfactoria.</p>
-  </section>
-
-  <section>
-    <h2>Nuestra Historia</h2>
-    <p>Nuestra historia comenzó en el año AC 3000 en la Venezuela natal de chapulin colorado, cuando un grupo de apasionados por la tecnología decidió fundar <strong>CelTech</strong> con el objetivo de democratizar el acceso a la tecnología móvil de última generación. Desde entonces, hemos crecido y evolucionado, adaptándonos constantemente a las demandas del mercado y manteniendo siempre nuestro compromiso con la calidad y la innovación.</p>
-    <p>A lo largo de los años, hemos consolidado nuestra posición como una de las principales empresas de venta de celulares online, expandiendo nuestro alcance a nivel nacional e internacional y estableciendo relaciones sólidas con nuestros clientes y socios comerciales.</p>
-    <p>Hoy en día, nos enorgullece ser reconocidos por nuestra excelencia en servicio al cliente, la calidad de nuestros productos y nuestro compromiso con la responsabilidad social y ambiental.</p>
-  </section>
-
-  <section>
-    <h2>Nuestros Valores</h2>
-    <ul>
-      <li>Calidad: Nos comprometemos a ofrecer productos de alta calidad y marcas reconocidas.</li>
-      <li>Servicio al Cliente: Nuestro equipo está dedicado a brindar una experiencia de compra excepcional.</li>
-      <li>Innovación: Estamos siempre en búsqueda de nuevas tecnologías para ofrecer a nuestros clientes lo mejor del mercado.</li>
-      <li>Transparencia: Nos regimos por principios éticos y transparentes en todas nuestras operaciones.</li>
-    </ul>
-  </section>
-  
-  <h2 id="Registro">REGISTRO DE USUARIO</h2>
-    <form action="show_data.html" method="post" target="_blank" >
-        <lebel  for="foto"></lebel><br><input type="image" src="Assets/CELTECH.png" ali width="160" height="110" name="foto" ><br>
-        <lebel  for="nombre">NOMBRE:</lebel><input type="text"  placeholder="Introducir su nombre" size="40" name="nombre" required ><br>
-        <lebel  for="apellido">APELLIDO: </lebel><input type="text" placeholder="Introducir su apellido" size="40" name="apellido"><br>
-        <lebel  for="direccion">DIRECCIÓN:</lebel><input type="address" placeholder="Introducir calle" size="40" name="direccion">
-        <lebel  for="numero">NÚMERO:</lebel><input type="number" placeholder="Introducir numero" size="40" name="numero"><br>
-        <lebel  for="telefono">TELEFONO:</lebel><input type="tel" size=" 40"  placeholder=" Introducir Telefono" size="4" name="Telefono"><br>
-        <lebel  for="ciudad">CIUDAD:</lebel><input type="text"  name="ciudad" value=""><br>
-        <lebel  for="correo">CORREO:</lebel><input type="email"  name="correo" ><br>
-        <fieldset >
-            <legend>CUANTO USA SU CELULAR</legend>
-            <label for="USO">Uso: 0%</label><input type="range"name="USO"><label>100%</label>
-        </fieldset>
-        <p>MODELO PREFERIDO:
-            <input type="radio" name="PREFERENCIA" value="SAMSUNG" checked>SAMSUNG
-            <input type="radio" name="PREFERENCIA" value="MOTOROLA" checked>MOTOROLA
-            <input type="radio" name="PREFERENCIA" value="OTRO" checked>OTRO
-        </p>
-        <fieldset >
-            <legend>REQUISITOS MÁS IMPORTANTES </legend>
-            <input type="checkbox" name="REQUISITOS"  value="MEMORIA"> MEMORIA
-            <input type="checkbox" name="REQUISITOS"  value="CAMARA"> CAMARA
-            <input type="checkbox" name="REQUISITOS"  value="AUDIO"> AUDIO
-            <input type="checkbox" name="REQUISITOS"  value="TAMAÑO"> TAMAÑO
-            <input type="checkbox" name="REQUISITOS"  value="PRECIO"> PRECIO
-            <input type="checkbox" name="REQUISITOS"  value="OTROS"> OTROS  
-         </fieldset>
-        <input type="submit"  value="Enviar"   >
-       
-    </form>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Para más información, contáctanos a través de:</p>
-        <ul>
-          <li>Teléfono: XXX-XXX-XXXX</li>
-          <li>Correo Electrónico: info@ejemplo.com</li>
-          <li>Dirección: Calle Ejemplo, Ciudad, País</li>
-        </ul>
-      </section>
-  
-  <article id="Sucursales">
-        <h2>Surcusales:</h2>
-        <section>
-            <p>Villa Devoto: <a style="text-decoration: none"
-                    href="https://www.google.com/maps/place/Av+Francisco+Bilbao+4800,+7580569+Las+Condes,+Regi%C3%B3n+Metropolitana,+Chile/@-33.4309346,-70.5769695,17z/data=!3m1!4b1!4m6!3m5!1s0x9662ceffcef0ba9d:0x3149083be2915e92!8m2!3d-33.4309392!4d-70.5720986!16s%2Fg%2F11c24vsxsb?hl=es&entry=ttu">Fco
-                    Beiro 4800 - CABA</a>
-            </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.7048221502296!2d-70.5720986!3d-33.4309392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662ceffcef0ba9d%3A0x3149083be2915e92!2sAv%20Francisco%20Bilbao%204800%2C%207580569%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1ses!2sar!4v1714172492358!5m2!1ses!2sar" width="300" height="225" style="border:0; margin-left: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-    </article>
     <!--Pie de pagina-->
     <footer style="background-color: #eff0f3;">
         <div style="display: flex; justify-content: center;">
