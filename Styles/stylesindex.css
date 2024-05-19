@@ -1,0 +1,247 @@
+/* Estilo global para el cuerpo de la página */
+body {
+    margin: 0; /* Elimina el margen por defecto */
+    font-family: proxima-nova, sans-serif; /* Establece la fuente para el texto */
+}
+
+/* Estilo para el header */
+.header {
+    background-color: #eff0f3; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    overflow: hidden; /* Oculta el contenido desbordante */
+    display: flex; /* Utiliza flexbox para organizar los hijos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos hijos */
+    align-items: center; /* Alinea los elementos hijos al centro verticalmente */
+}
+
+/* Estilo para el enlace del logo */
+.logo {
+    float: left; /* Posiciona el logo a la izquierda */
+}
+
+/* Estilo para la imagen del logo */
+.logo-img {
+    width: 130px; /* Ancho de la imagen */
+    height: 90px; /* Alto de la imagen */
+}
+
+/* Estilo para la navegación */
+.nav {
+    float: right; /* Posiciona la navegación a la derecha */
+    padding: 20px; /* Espaciado interno */
+    padding-top: 40px; /* Espaciado interno superior */
+    display: flex; /* Utiliza flexbox para organizar los enlaces */
+}
+
+/* Estilo para los enlaces de la navegación */
+.nav-link {
+    color: #001e1d; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    padding-right: 25px; /* Espaciado a la derecha */
+}
+
+/* Estilo para el botón de menú */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    flex-direction: column; /* Organiza las barras en columna */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilo para las barras del botón de menú */
+.menu-toggle .bar {
+    width: 25px; /* Ancho de las barras */
+    height: 3px; /* Alto de las barras */
+    background-color: #001e1d; /* Color de las barras */
+    margin: 3px 0; /* Espaciado entre las barras */
+}
+
+/* Media query para pantallas de ancho máximo 768px */
+@media (max-width: 768px) {
+    /* Estilo para la navegación en pantallas pequeñas */
+    .nav {
+        display: none; /* Oculta la navegación */
+        flex-direction: column; /* Organiza los enlaces en columna */
+        width: 100%; /* Ancho completo */
+        padding: 0; /* Sin espaciado interno */
+    }
+
+    /* Estilo para los enlaces de navegación en pantallas pequeñas */
+    .nav-link {
+        padding: 15px; /* Espaciado interno */
+        text-align: center; /* Centra el texto */
+        width: 100%; /* Ancho completo */
+        border-top: 1px solid #001e1d; /* Borde superior */
+    }
+
+    /* Estilo para mostrar la navegación cuando está activa */
+    .nav.active {
+        display: flex; /* Muestra la navegación */
+    }
+
+    /* Estilo para el botón de menú en pantallas pequeñas */
+    .menu-toggle {
+        display: flex; /* Muestra el botón de menú */
+    }
+
+    /* Posición del botón de menú en pantallas pequeñas */
+    .menu-toggle {
+        position: absolute; /* Posición absoluta */
+        top: 20px; /* Desde arriba */
+        right: 20px; /* Desde la derecha */
+    }
+}
+
+/* Estilos para la sección del banner principal */
+.hero-banner {
+    display: flex; /* Utiliza flexbox para organizar los hijos */
+    align-items: center; /* Alinea los hijos al centro verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    background-image: url('/Assets/Back-moto-hero.jpeg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    padding: 50px 0; /* Espaciado interno vertical */
+    color: white; /* Color del texto */
+}
+
+/* Estilo para la imagen del hero */
+.hero-image {
+    width: 40vw; /* Ancho del 40% de la ventana gráfica */
+    max-width: 600px; /* Ancho máximo */
+    height: auto; /* Alto automático para mantener proporción */
+}
+
+/* Estilo para el contenido del hero */
+.hero-content {
+    color: white; /* Color del texto */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: 20px; /* Margen a la izquierda */
+}
+
+/* Estilo para el título del hero */
+.hero-content h1 {
+    font-size: 3rem; /* Tamaño de fuente */
+    margin-bottom: 1rem; /* Margen inferior */
+}
+
+/* Estilo para la lista del hero */
+.hero-content ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin espaciado interno */
+}
+
+/* Estilo para los elementos de la lista del hero */
+.hero-content li {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+/* Definición de la animación de latido */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.1); /* Tamaño aumentado */
+    }
+}
+
+/* Aplicación de la animación al botón del hero */
+.hero-button {
+    margin-top: 2.5rem; /* Margen superior */
+    background-color: #ff6e6c; /* Color de fondo */
+    color: #1f1235; /* Color del texto */
+    animation: heartbeat 1.5s infinite; /* Animación de latido */
+}
+
+/* Estilo para los botones */
+.button {
+    padding: 1.2rem 2rem; /* Espaciado interno */
+    border-radius: 3px; /* Bordes redondeados */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    font-weight: 700; /* Grosor de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Media query para pantallas de ancho máximo 768px */
+@media (max-width: 768px) {
+    /* Estilo para el hero en pantallas pequeñas */
+    .hero-banner {
+        flex-direction: column; /* Organiza el contenido en columna */
+        padding: 20px; /* Espaciado interno */
+    }
+
+    /* Estilo para la imagen del hero en pantallas pequeñas */
+    .hero-image {
+        width: 80vw; /* Ancho del 80% de la ventana gráfica */
+        max-width: none; /* Sin ancho máximo */
+    }
+
+    /* Estilo para el contenido del hero en pantallas pequeñas */
+    .hero-content {
+        margin-left: 0; /* Sin margen izquierdo */
+        text-align: center; /* Centra el texto */
+    }
+
+    /* Estilo para el título del hero en pantallas pequeñas */
+    .hero-content h1 {
+        font-size: 2.5rem; /* Tamaño de fuente */
+    }
+
+    /* Estilo para los elementos de la lista del hero en pantallas pequeñas */
+    .hero-content li {
+        font-size: 1.2rem; /* Tamaño de fuente */
+    }
+
+    /* Estilo para el botón del hero en pantallas pequeñas */
+    .hero-button {
+        margin-top: 1.5rem; /* Margen superior */
+    }
+}
+
+/* Estilos para el contenedor de "Quiénes Somos" y demás secciones */
+.contenedor {
+    display: flex; /* Utiliza flexbox para organizar los hijos */
+    flex-wrap: wrap; /* Permite que los hijos se envuelvan */
+}
+
+/* Estilo para cada sección dentro del contenedor */
+section {
+    flex: 1; /* Hace que cada sección ocupe el mismo espacio */
+    margin: 10px; /* Margen alrededor de cada sección */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto total */
+}
+
+/* Media query para pantallas de ancho máximo 768px */
+@media (max-width: 768px) {
+    /* Estilo para el contenedor en pantallas pequeñas */
+    .contenedor {
+        flex-direction: column; /* Organiza el contenido en columna */
+    }
+}
+
+/* Estilos para el segundo contenedor */
+.contenedor2 {
+    display: flex; /* Utiliza flexbox para organizar los hijos */
+    flex-wrap: wrap; /* Permite que los hijos se envuelvan */
+}
+
+/* Estilo para secciones y artículos dentro del contenedor */
+section, article {
+    flex: 1; /* Hace que cada sección o artículo ocupe el mismo espacio */
+    margin: 10px; /* Margen alrededor de cada sección o artículo */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto total */
+}
+
+/* Estilo para los iframes */
+iframe {
+    width: 100%; /* Ajusta el ancho del iframe al 100% */
+    height: 450px; /* Alto del iframe */
+}
+
+/* Media query para pantallas de ancho máximo 768px */
+@media (max-width: 768px) {
+    /* Estilo para el contenedor en pantallas pequeñas */
+    .contenedor2 {
+        flex-direction: column; /* Organiza el contenido en columna */
+    }
+}

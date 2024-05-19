@@ -5,38 +5,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vinculamos el archivo CSS -->
+    <link rel="stylesheet" href="/Styles/stylesindex.css">
     <title>CellTech</title>
-    <style>
-        footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        }
-        a:hover {
-            opacity: 0.6;
-        }
-    </style>
 </head>
 
-<body style="background-color:#fffffe; font-family:  proxima-nova, sans-serif; color: #2a2a2a; position: relative; min-height: 100vh;">
-    <header id="Inicio" style="background-color: #eff0f3; padding: 10px; overflow: hidden;">
-      <a href="#" style="float: left"><img src="Assets/CELTECH.png" alt="Logo" width="130px" height="90px"/></a>
-      <nav style="float: right; padding: 20px; padding-top: 40px;">
-        <a href="#Inicio" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Inicio</a>
-        <a href="Pages/quienes somos.html"style="color: #001e1d; text-decoration: none; padding-right: 25px;">Acerca de</a>
-        <a href="Pages/contacto.html" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Contacto</a>
-        <a href="Pages/usuario.html" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Registrese</a>
-        <a href="Pages/sucursales.html" style="color: #001e1d; text-decoration: none; padding-right: 25px;">Sucursales</a>
-      </nav>
+<body>
+    <!-- Sección de cabecera -->
+    <header id="Inicio" class="header">
+        <!-- Logo de la empresa -->
+        <a href="#" class="logo">
+            <img src="Assets/CELTECH.png" alt="Logo" class="logo-img"/>
+        </a>
+        <!-- Navegación del sitio -->
+        <nav class="nav">
+            <a href="#Inicio" class="nav-link">Inicio</a>
+            <a href="#quienes-somos" class="nav-link">Acerca de</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+            <a href="Pages/sucursales.html" class="nav-link">Sucursales</a>
+        </nav>
+        <!-- Botón de menú para responsive -->
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
-
-    <div style="display: inline-block;  white-space: nowrap;">
-      <img src="Assets/Primera-Hero.png" alt="celular" style="max-width: 50%; height: auto; vertical-align: top; margin-top: 0% ;margin-right: 20px;">
-      <p style="font-size: 25px; max-width: 50%; display: inline-block; padding-top: 350px;">
-          <a href="Pages/productos_destacados.html" style="text-decoration: none; padding-right: 25px;">Ofertas</a>
-      </p>
-  </div>
-    <!--Pie de pagina-->
+    
+    <!-- Sección del banner principal -->
+    <section class="hero-banner">
+        <img src="/Assets/moto-razr-hero.png" alt="Moto Razr 40 Ultra 5G" class="hero-image">
+        <div class="hero-content">
+            <h1>Moto Razr 40 Ultra 5G</h1>
+            <ul>
+                <li>Pantalla P-OLED de 6.9", Conectividad 5G</li>
+                <li>Procesador Qualcomm Snapdragon 8+ Gen 1</li>
+                <li>Cámara principal de 50 MP</li>
+                <li>Video 8K UHD</li>
+            </ul>
+            <button class="button hero-button">Lo Quiero!</button>
+        </div>
+    </section>
+    
+    <!-- Contenedor principal para "Quiénes Somos" y demás secciones -->
+    <div class="contenedor">
+        <!-- Sección "Quiénes Somos" -->
+        <section id="quienes-somos">
+            <h2>Quiénes Somos</h2>
+            <p>Somos CelTech, líderes en la venta de celulares online. Nos apasiona la tecnología y nos esforzamos por ofrecer lo último en telefonía móvil con calidad y un servicio al cliente excepcional. Con un equipo comprometido, garantizamos una experiencia de compra única y satisfactoria.</p>
+        </section>
+    
+        <!-- Sección "Nuestra Historia" -->
+        <section>
+            <h2>Nuestra Historia</h2>
+            <p>En AC 3000, en Venezuela, nació CelTech con la misión de democratizar la tecnología móvil. Desde entonces, hemos crecido y evolucionado, adaptándonos a las demandas del mercado. Hoy, nos destacamos nacional e internacionalmente por nuestra calidad, innovación y compromiso social y ambiental.</p>
+        </section>
+    
+        <!-- Sección "Nuestros Valores" -->
+        <section>
+            <h2>Nuestros Valores</h2>
+            <ul>
+                <li>En CelTech, nos guiamos por la calidad, ofreciendo marcas reconocidas.</li>
+                <li>Nuestro servicio al cliente es excepcional, siempre en busca de innovación.</li>
+                <li>Operamos con total transparencia y ética.</li>
+            </ul>
+        </section>
+    </div>
+    
+    <!-- Contenedor para "Contacto" y "Sucursales" -->
+    <div class="contenedor2">
+        <!-- Sección "Contacto" -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="show_data.html" target="_blank">
+                <label for="foto"><label><br><input type="image" src="../Assets/CELTECH.png" width="180" height="130" name="foto"><br>
+                <label for="nombre">NOMBRE:<label><input type="text" placeholder="Introducir su nombre" size="40" name="nombre" required><br>
+                <label for="apellido">APELLIDO:<label><input type="text" placeholder="Introducir su apellido" size="40" name="apellido"><br>
+                <label for="direccion">DIRECCIÓN:<label><input type="address" placeholder="Introducir calle" size="40" name="direccion">
+                <label for="numero">NÚMERO:<label><input type="number" placeholder="Introducir número" size="40" name="numero"><br>
+                <label for="telefono">TELEFONO:<label><input type="tel" placeholder="Introducir Teléfono" size="40" name="Telefono"><br>
+                <label for="ciudad">CIUDAD:<label><input type="text" name="ciudad" value=""><br>
+                <label for="correo">CORREO:<label><input type="email" name="correo"><br>
+                <fieldset>
+                    <legend>CUANTO USA SU CELULAR</legend>
+                    <label for="USO">Uso: 0%</label><input type="range" name="USO"><label>100%</label>
+                </fieldset>
+                <p>MODELO PREFERIDO:
+                    <input type="radio" name="PREFERENCIA" value="SAMSUNG" checked>SAMSUNG
+                    <input type="radio" name="PREFERENCIA" value="MOTOROLA" checked>MOTOROLA
+                    <input type="radio" name="PREFERENCIA" value="OTRO" checked>OTRO
+                </p>
+                <fieldset>
+                    <legend>REQUISITOS MÁS IMPORTANTES </legend>
+                    <input type="checkbox" name="REQUISITOS" value="MEMORIA"> MEMORIA
+                    <input type="checkbox" name="REQUISITOS" value="CAMARA"> CAMARA
+                    <input type="checkbox" name="REQUISITOS" value="AUDIO"> AUDIO
+                    <input type="checkbox" name="REQUISITOS" value="TAMAÑO"> TAMAÑO
+                    <input type="checkbox" name="REQUISITOS" value="PRECIO"> PRECIO
+                    <input type="checkbox" name="REQUISITOS" value="OTROS"> OTROS  
+                </fieldset>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    
+        <!-- Sección "Sucursales" -->
+        <article id="Sucursales">
+            <h2>Sucursales:</h2>
+            <section>
+                <p>Villa Devoto: <a style="text-decoration: none" href="https://www.google.com/maps/place/Av+Francisco+Bilbao+4800,+7580569+Las+Condes,+Regi%C3%B3n+Metropolitana,+Chile/@-33.4309346,-70.5769695,17z/data=!3m1!4b1!4m6!3m5!1s0x9662ceffcef0ba9d:0x3149083be2915e92!8m2!3d-33.4309392!4d-70.5720986!16s%2Fg%2F11c24vsxsb?hl=es&entry=ttu">Fco Beiro 4800 - CABA</a></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.7048221502296!2d-70.5720986!3d-33.4309392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662ceffcef0ba9d%3A0x3149083be2915e92!2sAv%20Francisco%20Bilbao%204800%2C%207580569%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1ses!2sar!4v1714172492358!5m2!1ses!2sar" width="400" height="225" style="border:0; margin-left: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </article>
+    </div>
+    
+    <!-- Pie de página -->
     <footer style="background-color: #eff0f3;">
         <div style="display: flex; justify-content: center;">
             <a href="">
@@ -55,6 +137,18 @@
 
         <p style="text-align: center; color: #001e1d">© 2024 · CellTech</p>
     </footer>
+
+    <!-- Script para el menú responsive -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav');
+    
+        menuToggle.addEventListener('click', function () {
+            nav.classList.toggle('active');
+        });
+    });
+    </script>
 </body>
 
 </html>
