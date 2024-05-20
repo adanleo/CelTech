@@ -77,32 +77,42 @@
         <!-- Sección "Contacto" -->
         <section id="contacto">
             <h2>Contacto</h2>
-            <form action="show_data.html" target="_blank">
-                <label for="foto"><label><br><input type="image" src="../Assets/CELTECH.png" width="180" height="130" name="foto"><br>
-                <label for="nombre">NOMBRE:<label><input type="text" placeholder="Introducir su nombre" size="40" name="nombre" required><br>
-                <label for="apellido">APELLIDO:<label><input type="text" placeholder="Introducir su apellido" size="40" name="apellido"><br>
-                <label for="direccion">DIRECCIÓN:<label><input type="address" placeholder="Introducir calle" size="40" name="direccion">
-                <label for="numero">NÚMERO:<label><input type="number" placeholder="Introducir número" size="40" name="numero"><br>
-                <label for="telefono">TELEFONO:<label><input type="tel" placeholder="Introducir Teléfono" size="40" name="Telefono"><br>
-                <label for="ciudad">CIUDAD:<label><input type="text" name="ciudad" value=""><br>
-                <label for="correo">CORREO:<label><input type="email" name="correo"><br>
+            <form id="contactForm">
+                <label for="foto"></label><br>
+                <input type="image" src="../Assets/CELTECH.png" width="180" height="130" name="foto"><br>
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" placeholder="Introducir su nombre" size="40" name="nombre" required><br>
+                <label for="apellido">APELLIDO:</label>
+                <input type="text" placeholder="Introducir su apellido" size="40" name="apellido"><br>
+                <label for="direccion">DIRECCIÓN:</label>
+                <input type="text" placeholder="Introducir calle" size="40" name="direccion"><br>
+                <label for="numero">NÚMERO:</label>
+                <input type="number" placeholder="Introducir número" size="40" name="numero"><br>
+                <label for="telefono">TELÉFONO:</label>
+                <input type="tel" placeholder="Introducir Teléfono" size="40" name="telefono"><br>
+                <label for="ciudad">CIUDAD:</label>
+                <input type="text" name="ciudad"><br>
+                <label for="correo">CORREO:</label>
+                <input type="email" name="correo"><br>
                 <fieldset>
-                    <legend>CUANTO USA SU CELULAR</legend>
-                    <label for="USO">Uso: 0%</label><input type="range" name="USO"><label>100%</label>
+                    <legend>CUÁNTO USA SU CELULAR</legend>
+                    <label for="uso">Uso: 0%</label>
+                    <input type="range" name="uso" min="0" max="100">
+                    <label>100%</label>
                 </fieldset>
                 <p>MODELO PREFERIDO:
-                    <input type="radio" name="PREFERENCIA" value="SAMSUNG" checked>SAMSUNG
-                    <input type="radio" name="PREFERENCIA" value="MOTOROLA" checked>MOTOROLA
-                    <input type="radio" name="PREFERENCIA" value="OTRO" checked>OTRO
+                    <input type="radio" name="preferencia" value="SAMSUNG" checked>SAMSUNG
+                    <input type="radio" name="preferencia" value="MOTOROLA">MOTOROLA
+                    <input type="radio" name="preferencia" value="OTRO">OTRO
                 </p>
                 <fieldset>
-                    <legend>REQUISITOS MÁS IMPORTANTES </legend>
-                    <input type="checkbox" name="REQUISITOS" value="MEMORIA"> MEMORIA
-                    <input type="checkbox" name="REQUISITOS" value="CAMARA"> CAMARA
-                    <input type="checkbox" name="REQUISITOS" value="AUDIO"> AUDIO
-                    <input type="checkbox" name="REQUISITOS" value="TAMAÑO"> TAMAÑO
-                    <input type="checkbox" name="REQUISITOS" value="PRECIO"> PRECIO
-                    <input type="checkbox" name="REQUISITOS" value="OTROS"> OTROS  
+                    <legend>REQUISITOS MÁS IMPORTANTES</legend>
+                    <input type="checkbox" name="requisitos" value="MEMORIA"> MEMORIA
+                    <input type="checkbox" name="requisitos" value="CAMARA"> CAMARA
+                    <input type="checkbox" name="requisitos" value="AUDIO"> AUDIO
+                    <input type="checkbox" name="requisitos" value="TAMAÑO"> TAMAÑO
+                    <input type="checkbox" name="requisitos" value="PRECIO"> PRECIO
+                    <input type="checkbox" name="requisitos" value="OTROS"> OTROS  
                 </fieldset>
                 <input type="submit" value="Enviar">
             </form>
@@ -117,7 +127,20 @@
             </section>
         </article>
     </div>
-    
+
+    <div id="overlay"></div>
+        <div id="popup">
+            <h1>La siguiente información ha sido enviada como sus comentarios:</h1>
+            <table border="1" align="center" width="100%">
+                <tr>
+                    <th align="center">Campo de formulario</th>
+                    <th align="center">Valor de campo</th>
+                </tr>
+                <tbody id="popupContent"></tbody>
+            </table>
+            <button onclick="closePopup()">Cerrar</button>
+        </div>
+
     <!-- Pie de página -->
     <footer style="background-color: #eff0f3;">
         <div style="display: flex; justify-content: center;">
@@ -148,6 +171,34 @@
             nav.classList.toggle('active');
         });
     });
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar la recarga de la página
+
+        var formData = new FormData(event.target);
+        var popupContent = document.getElementById('popupContent');
+        popupContent.innerHTML = ''; // Limpiar contenido anterior
+
+        for (var [name, value] of formData) {
+            var tr = document.createElement('tr');
+            var tdName = document.createElement('td');
+            var tdValue = document.createElement('td');
+            tdName.textContent = name;
+            tdValue.textContent = value;
+            tr.appendChild(tdName);
+            tr.appendChild(tdValue);
+            popupContent.appendChild(tr);
+        }
+
+        // Mostrar el popup
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('popup').style.display = 'block';
+    });
+
+    function closePopup() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('popup').style.display = 'none';
+    }
     </script>
 </body>
 
