@@ -303,18 +303,7 @@ input[type="submit"]:hover {
     max-width: 90%; /* Establece un ancho máximo del 90% del viewport */
     max-height: 90%; /* Establece una altura máxima del 90% del viewport */
     overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede la altura máxima */
-}
-
-#overlay {
-    display: none; /* Oculta el overlay por defecto */
-    position: fixed; /* Fija la posición del overlay en relación a la ventana del navegador */
-    left: 0; /* Coloca el overlay en el borde izquierdo */
-    top: 0; /* Coloca el overlay en el borde superior */
-    width: 100%; /* Establece el ancho del overlay al 100% del viewport */
-    height: 100%; /* Establece la altura del overlay al 100% del viewport */
-    background: rgba(0, 0, 0, 0.5); /* Establece un fondo negro semi-transparente para el overlay */
-    z-index: 999; /* Asegura que el overlay esté justo debajo del popup */
-}
+} 
 
 table {
     width: 100%; /* Establece el ancho de la tabla al 100% del contenedor */
