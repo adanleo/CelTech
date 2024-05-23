@@ -199,94 +199,132 @@ body {
     }
 }
 
-/* Estilos para el contenedor de "Quiénes Somos" y demás secciones */
-.contenedor {
-    display: flex; /* Utiliza flexbox para organizar los hijos */
-    flex-wrap: wrap; /* Permite que los hijos se envuelvan */
+#videoPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo para cada sección dentro del contenedor */
+
+/* Estilos para el contenedor principal */
+.contenedor-principal {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f0f8ff; /* Fondo azul claro */
+    border: 2px solid #00bfff; /* Borde azul */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px; /* Margen alrededor del contenedor */
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
+}
+
+/* Estilo para los sub-contenedores */
+.contenedor1, .contenedor2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuir el espacio de manera uniforme */
+    margin: 10px;
+    flex-basis: 100%; /* Ocupa todo el ancho del contenedor principal */
+}
+
+/* Estilo para cada sección dentro de los sub-contenedores */
 section {
-    flex: 1; /* Hace que cada sección ocupe el mismo espacio */
-    margin: 10px; /* Margen alrededor de cada sección */
-    box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto total */
+    background-color: #f8f8f8; /* Fondo claro para distinguir las secciones */
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para mejor visualización */
+    padding: 20px;
+    margin-bottom: 20px;
+    flex: 1; /* Flexibilidad para que todos los elementos ocupen el mismo espacio */
+    margin-right: 10px; /* Espacio entre los elementos */
+    box-sizing: border-box; /* Para incluir el padding y border en el ancho total */
+    text-decoration: none; /* Elimina cualquier decoración de texto */
 }
 
-/* Media query para pantallas de ancho máximo 768px */
+/* Estilo para la lista dentro del section */
+section ul {
+    list-style-type: none; /* Quita los puntos de lista predeterminados */
+    padding: 0; /* Quita el relleno predeterminado */
+}
+
+/* Estilo para los elementos de la lista dentro del section */
+section li {
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+iframe .mapa{
+    width: 100%; /* Asegura que el iframe ocupe el 100% del ancho disponible */
+    height: 550px; /* Ajusta la altura automáticamente */
+}
+
 @media (max-width: 768px) {
-    /* Estilo para el contenedor en pantallas pequeñas */
-    .contenedor {
-        flex-direction: column; /* Organiza el contenido en columna */
+    .contenedor1, .contenedor2 {
+        flex-direction: column; /* Colocar en columna en pantallas pequeñas */
     }
-}
 
-/* Estilos para el segundo contenedor */
-.contenedor2 {
-    display: flex; /* Utiliza flexbox para organizar los hijos */
-    flex-wrap: wrap; /* Permite que los hijos se envuelvan */
-}
-
-/* Estilo para secciones y artículos dentro del contenedor */
-section, article {
-    flex: 1; /* Hace que cada sección o artículo ocupe el mismo espacio */
-    margin: 10px; /* Margen alrededor de cada sección o artículo */
-    box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto total */
-}
-
-/* Estilo para los iframes */
-iframe {
-    width: 100%; /* Ajusta el ancho del iframe al 100% */
-    height: 450px; /* Alto del iframe */
-}
-
-/* Media query para pantallas de ancho máximo 768px */
-@media (max-width: 768px) {
-    /* Estilo para el contenedor en pantallas pequeñas */
-    .contenedor2 {
-        flex-direction: column; /* Organiza el contenido en columna */
+    section {
+        margin-right: 0;
+        margin-bottom: 20px; /* Espacio entre los elementos en columna */
+        width: 100%; /* Asegura que cada sección ocupe el 100% del ancho disponible */
     }
-}
 
-section#contacto {
-    padding: 20px; /* Añade un relleno de 20px alrededor del contenido del elemento section con el id "contacto" */
 }
-
-form {
-    display: flex; /* Utiliza flexbox para el layout del formulario */
-    flex-direction: column; /* Ordena los elementos del formulario en una columna */
-    max-width: 600px; /* Establece un ancho máximo de 600px para el formulario */
-    margin: 0 auto; /* Centra el formulario horizontalmente */
-}
-
-label, input, fieldset, p {
-    margin-bottom: 15px; /* Añade un margen inferior de 15px a estos elementos para espacio entre ellos */
-}
-
-fieldset {
-    border: 1px solid #ccc; /* Añade un borde de 1px sólido y color gris claro al fieldset */
-    padding: 10px; /* Añade un relleno de 10px dentro del fieldset */
-}
-
-legend {
-    padding: 0 10px; /* Añade un relleno horizontal de 10px a los elementos legend */
-}
-
-input[type="text"], input[type="number"], input[type="tel"], input[type="email"], input[type="range"] {
-    width: 100%; /* Establece el ancho del input al 100% del contenedor padre */
-    padding: 8px; /* Añade un relleno de 8px dentro del input */
-    box-sizing: border-box; /* Incluye el padding y el borde en el total del ancho del input */
+/* Estilo para los inputs y botones */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
-    padding: 10px 15px; /* Añade un relleno de 10px vertical y 15px horizontal al botón submit */
-    background-color: #4CAF50; /* Establece el color de fondo del botón a un verde */
-    color: white; /* Establece el color del texto del botón a blanco */
-    border: none; /* Elimina el borde del botón */
-    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón */
+    width: 100%;
+    padding: 10px;
+    background-color: #00bfff; /* Fondo azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049; /* Cambia el color de fondo del botón cuando se pasa el cursor por encima */
+    background-color: #009acd; /* Azul más oscuro en hover */
+}
+
+legend {
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    width: 100%; /* Añadimos esta propiedad */
+}
+
+input[type="range"] {
+    width: 100%; /* Aplicar width: 100% al input type range */
+}
+
+h2 {
+    color: #ff6347; /* Color naranja para el título */
+    text-align: center;
+}
+
+p, label {
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 #popup {
@@ -327,15 +365,4 @@ button {
 
 button:hover {
     background-color: #45a049; /* Cambia el color de fondo del botón cuando se pasa el cursor por encima */
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    form {
-        padding: 0 10px; /* Añade un relleno horizontal de 10px al formulario en pantallas pequeñas */
-    }
-
-    fieldset, p {
-        flex-direction: column; /* Ordena los elementos de fieldset y p en una columna en pantallas pequeñas */
-    }
 }

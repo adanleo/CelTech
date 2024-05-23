@@ -22,7 +22,7 @@
             <a href="#Inicio" class="nav-link">Inicio</a>
             <a href="#quienes-somos" class="nav-link">Acerca de</a>
             <a href="#contacto" class="nav-link">Contacto</a>
-            <a href="Pages/sucursales.html" class="nav-link">Sucursales</a>
+            <a href="#sucursales" class="nav-link">Sucursales</a>
         </nav>
         <!-- Botón de menú para responsive -->
         <div class="menu-toggle">
@@ -42,92 +42,99 @@
                 <li>Procesador Qualcomm Snapdragon 8+ Gen 1</li>
                 <li>Cámara principal de 50 MP</li>
                 <li>Video 8K UHD</li>
+                <li><a href="#" onclick="mostrarPopup()">Mira la review</a></li>
             </ul>
             <button class="button hero-button">Lo Quiero!</button>
         </div>
     </section>
-    
-    <!-- Contenedor principal para "Quiénes Somos" y demás secciones -->
-    <div class="contenedor">
-        <!-- Sección "Quiénes Somos" -->
-        <section id="quienes-somos">
-            <h2>Quiénes Somos</h2>
-            <p>Somos CelTech, líderes en la venta de celulares online. Nos apasiona la tecnología y nos esforzamos por ofrecer lo último en telefonía móvil con calidad y un servicio al cliente excepcional. Con un equipo comprometido, garantizamos una experiencia de compra única y satisfactoria.</p>
-        </section>
-    
-        <!-- Sección "Nuestra Historia" -->
-        <section>
-            <h2>Nuestra Historia</h2>
-            <p>En AC 3000, en Venezuela, nació CelTech con la misión de democratizar la tecnología móvil. Desde entonces, hemos crecido y evolucionado, adaptándonos a las demandas del mercado. Hoy, nos destacamos nacional e internacionalmente por nuestra calidad, innovación y compromiso social y ambiental.</p>
-        </section>
-    
-        <!-- Sección "Nuestros Valores" -->
-        <section>
-            <h2>Nuestros Valores</h2>
-            <ul>
-                <li>En CelTech, nos guiamos por la calidad, ofreciendo marcas reconocidas.</li>
-                <li>Nuestro servicio al cliente es excepcional, siempre en busca de innovación.</li>
-                <li>Operamos con total transparencia y ética.</li>
-            </ul>
-        </section>
-    </div>
-    
-    <!-- Contenedor para "Contacto" y "Sucursales" -->
-    <div class="contenedor2">
-        <!-- Sección "Contacto" -->
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form id="contactForm">
-                <label for="foto"></label><br>
-                <input type="image" src="../Assets/CELTECH.png" width="180" height="130" name="foto"><br>
-                <label for="Nombre">NOMBRE:</label>
-                <input type="text" placeholder="Introducir su nombre" size="40" name="Nombre" required><br>
-                <label for="Apellido">APELLIDO:</label>
-                <input type="text" placeholder="Introducir su apellido" size="40" name="Apellido"><br>
-                <label for="Direccion">DIRECCIÓN:</label>
-                <input type="text" placeholder="Introducir calle" size="40" name="Direccion"><br>
-                <label for="Numero">NÚMERO:</label>
-                <input type="number" placeholder="Introducir número" size="40" name="Numero"><br>
-                <label for="Telefono">TELÉFONO:</label>
-                <input type="tel" placeholder="Introducir Teléfono" size="40" name="Telefono"><br>
-                <label for="Ciudad">CIUDAD:</label>
-                <input type="text" name="Ciudad"><br>
-                <label for="Correo">CORREO:</label>
-                <input type="email" name="Correo"><br>
-                <fieldset>
-                    <legend>CUÁNTO USA SU CELULAR</legend>
-                    <label for="Uso">Uso: 0%</label>
-                    <input type="range" name="Uso" min="0" max="100">
-                    <label>100%</label>
-                </fieldset>
-                <p>MODELO PREFERIDO:
-                    <input type="radio" name="Preferencia" value="SAMSUNG" checked>SAMSUNG
-                    <input type="radio" name="Preferencia" value="MOTOROLA">MOTOROLA
-                    <input type="radio" name="Preferencia" value="OTRO">OTRO
-                </p>
-                <fieldset>
-                    <legend>REQUISITOS MÁS IMPORTANTES</legend>
-                    <input type="checkbox" name="Requisitos" value="MEMORIA"> MEMORIA
-                    <input type="checkbox" name="Requisitos" value="CAMARA"> CAMARA
-                    <input type="checkbox" name="Requisitos" value="AUDIO"> AUDIO
-                    <input type="checkbox" name="Requisitos" value="TAMAÑO"> TAMAÑO
-                    <input type="checkbox" name="Requisitos" value="PRECIO"> PRECIO
-                    <input type="checkbox" name="Requisitos" value="OTROS"> OTROS  
-                </fieldset>
-                <input type="submit" value="Enviar">
-            </form>
-        </section>
-    
-        <!-- Sección "Sucursales" -->
-        <article id="Sucursales">
-            <h2>Sucursales:</h2>
-            <section>
-                <p>Villa Devoto: <a style="text-decoration: none" href="https://www.google.com/maps/place/Av+Francisco+Bilbao+4800,+7580569+Las+Condes,+Regi%C3%B3n+Metropolitana,+Chile/@-33.4309346,-70.5769695,17z/data=!3m1!4b1!4m6!3m5!1s0x9662ceffcef0ba9d:0x3149083be2915e92!8m2!3d-33.4309392!4d-70.5720986!16s%2Fg%2F11c24vsxsb?hl=es&entry=ttu">Fco Beiro 4800 - CABA</a></p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.7048221502296!2d-70.5720986!3d-33.4309392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662ceffcef0ba9d%3A0x3149083be2915e92!2sAv%20Francisco%20Bilbao%204800%2C%207580569%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1ses!2sar!4v1714172492358!5m2!1ses!2sar" width="400" height="225" style="border:0; margin-left: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </section>
-        </article>
-    </div>
 
+    <div id="videoPopup" class="popup">
+        <iframe width="640" height="360" src="https://www.youtube.com/watch?v=RC8ujMF_buk" frameborder="0" allow="autoplay; fullscreen"></iframe>
+        <button onclick="cerrarPopup()">Cerrar</button>
+    </div>
+    
+    <div class="contenedor-principal">
+        <div class="contenedor1">
+            <!-- Sección "Quiénes Somos" -->
+            <section id="quienes-somos">
+                <h2>Quiénes Somos</h2>
+                <p>Somos CelTech, líderes en la venta de celulares online. Nos apasiona la tecnología y nos esforzamos por ofrecer lo último en telefonía móvil con calidad y un servicio al cliente excepcional. Con un equipo comprometido, garantizamos una experiencia de compra única y satisfactoria.</p>
+            </section>
+        
+            <!-- Sección "Nuestra Historia" -->
+            <section id="nuestra-historia">
+                <h2>Nuestra Historia</h2>
+                <p>En AC 3000, en Venezuela, nació CelTech con la misión de democratizar la tecnología móvil. Desde entonces, hemos crecido y evolucionado, adaptándonos a las demandas del mercado. Hoy, nos destacamos nacional e internacionalmente por nuestra calidad, innovación y compromiso social y ambiental.</p>
+            </section>
+        
+            <!-- Sección "Nuestros Valores" -->
+            <section id="nuestros-valores">
+                <h2>Nuestros Valores</h2>
+                    <p>En CelTech, nos guiamos por la calidad, ofreciendo marcas reconocidas.</p>
+                    <p>Nuestro servicio al cliente es excepcional, siempre en busca de innovación.</p>
+                    <p>Operamos con total transparencia y ética.</p>
+            </section>
+        </div>
+        
+    
+        <div class="contenedor2">
+            <!-- Formulario de contacto -->
+            <section id="contacto">
+                <h2>Contacto Rápido</h2>
+                <p>¡Contáctanos hoy y recibe una respuesta en 24 horas!</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Correo Electrónico">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Teléfono">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="website" placeholder="Sitio Web">
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>Cuanto usas tu telefono?</legend>
+                            <label for="Uso">0%</label>
+                            <label>100%</label>
+                            <input type="range" name="Uso" min="0" max="100">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Caracteristicas mas importantes</legend>
+                            <input type="checkbox" name="Requisitos" value="MEMORIA"> Memoria
+                            <input type="checkbox" name="Requisitos" value="CAMARA"> Camara
+                            <input type="checkbox" name="Requisitos" value="AUDIO"> Audio
+                            <input type="checkbox" name="Requisitos" value="TAMAÑO"> Tamaño
+                            <input type="checkbox" name="Requisitos" value="PRECIO"> Precio
+                            <input type="checkbox" name="Requisitos" value="OTROS"> Otros
+                        </fieldset>
+                    </div>
+                    <p>Modelo preferido:
+                        <input type="radio" name="Preferencia" value="SAMSUNG" checked>SAMSUNG
+                        <input type="radio" name="Preferencia" value="MOTOROLA">MOTOROLA
+                        <input type="radio" name="Preferencia" value="OTRO">OTRO
+                    </p>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Mensaje"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </section>
+        
+            <!-- Sección de Sucursales -->
+            <section id="sucursales">
+                <h2>Sucursales</h2>
+                <p>Villa Devoto: <a href="https://maps.google.com?q=Fco+Beiro+4800,+CABA" target="_blank">Fco Beiro 4800 - CABA</a></p>
+                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3131.835849281572!2d-58.53019268466715!3d-34.60373818045971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb882dfadd0f7%3A0x514e7b3f8a8a18ff!2sFrancisco%20Bilbao%204800%2C%20C1407%20CABA%2C%20Argentina!5e0!3m2!1ses!2sar!4v1620670822445!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+        </div>
+        
+    </div>
     
         <div id="popup">
             <h1>La siguiente información ha sido enviada como sus comentarios:</h1>
@@ -173,30 +180,39 @@
     });
 
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Evitar la recarga de la página
+    event.preventDefault(); // Evitar la recarga de la página
 
-        var formData = new FormData(event.target);
-        var popupContent = document.getElementById('popupContent');
-        popupContent.innerHTML = ''; // Limpiar contenido anterior
+    var formData = new FormData(event.target);
+    var popupContent = document.getElementById('popupContent');
+    popupContent.innerHTML = ''; // Limpiar contenido anterior
 
-        for (var [name, value] of formData) {
-            var tr = document.createElement('tr');
-            var tdName = document.createElement('td');
-            var tdValue = document.createElement('td');
-            tdName.textContent = name;
-            tdValue.textContent = value;
-            tr.appendChild(tdName);
-            tr.appendChild(tdValue);
-            popupContent.appendChild(tr);
-        }
-
-        // Mostrar el popup
-        document.getElementById('popup').style.display = 'block';
-    });
-
-    function closePopup() {
-        document.getElementById('popup').style.display = 'none';
+    for (var [name, value] of formData) {
+        var tr = document.createElement('tr');
+        var tdName = document.createElement('td');
+        var tdValue = document.createElement('td');
+        tdName.textContent = name;
+        tdValue.textContent = value;
+        tr.appendChild(tdName);
+        tr.appendChild(tdValue);
+        popupContent.appendChild(tr);
     }
+
+    // Mostrar el popup
+    document.getElementById('popup').style.display = 'block';
+});
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+function mostrarPopup() {
+    document.getElementById('videoPopup').style.display = 'block';
+    event.preventDefault();
+}
+
+function cerrarPopup() {
+    document.getElementById('videoPopup').style.display = 'none';
+}
     </script>
 </body>
 
