@@ -1,0 +1,428 @@
+/* Estilo global para el cuerpo de la página */
+body {
+    font-family: proxima-nova, sans-serif; /* Fuente de texto para toda la página */
+    margin: 0; /* Sin margen por defecto */
+    padding: 0; /* Sin relleno por defecto */
+    box-sizing: border-box; /* Incluye padding y border en el total del ancho y alto */
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces de ancla */
+}
+
+/* Estilo para el header */
+.header {
+    background-color: #eff0f3; /* Color de fondo del header */
+    padding: 10px; /* Relleno interno del header */
+    overflow: hidden; /* Oculta contenido desbordante */
+    display: flex; /* Flexbox para organización de elementos */
+    justify-content: space-between; /* Distribución del espacio entre los hijos */
+    align-items: center; /* Alineación vertical de los hijos */
+}
+
+/* Estilo para el enlace del logo */
+.logo {
+    float: left; /* Posiciona el logo a la izquierda */
+}
+
+/* Estilo para la imagen del logo */
+.logo-img {
+    width: 130px; /* Ancho de la imagen del logo */
+    height: 90px; /* Alto de la imagen del logo */
+}
+
+/* Estilo para la navegación */
+.nav {
+    float: right; /* Posiciona la navegación a la derecha */
+    padding: 20px; /* Relleno interno de la navegación */
+    padding-top: 40px; /* Relleno interno superior de la navegación */
+    display: flex; /* Flexbox para organizar los enlaces */
+}
+
+/* Estilo para los enlaces de la navegación */
+.nav-link {
+    color: #001e1d; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    padding-right: 25px; /* Relleno a la derecha */
+}
+
+/* Estilo para el botón de menú (versión móvil) */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    flex-direction: column; /* Organización en columna */
+    cursor: pointer; /* Cursor cambia a pointer */
+}
+
+/* Estilo para las barras del botón de menú */
+.menu-toggle .bar {
+    width: 25px; /* Ancho de las barras */
+    height: 3px; /* Alto de las barras */
+    background-color: #001e1d; /* Color de las barras */
+    margin: 3px 0; /* Espaciado entre las barras */
+}
+
+/* Responsive del header*/
+@media (max-width: 768px) {
+    .nav {
+        display: none; /* Oculta la navegación */
+        flex-direction: column; /* Organización en columna */
+        width: 100%; /* Ancho completo */
+        padding: 0; /* Sin relleno */
+    }
+
+    .nav-link {
+        padding: 15px; /* Relleno interno */
+        text-align: center; /* Texto centrado */
+        width: 100%; /* Ancho completo */
+        border-top: 1px solid #001e1d; /* Borde superior */
+    }
+
+    .nav.active {
+        display: flex; /* Muestra la navegación cuando está activa */
+    }
+
+    .menu-toggle {
+        display: flex; /* Muestra el botón de menú */
+    }
+
+    .menu-toggle {
+        position: absolute; /* Posición absoluta */
+        top: 20px; /* Desde arriba */
+        right: 20px; /* Desde la derecha */
+    }
+}
+
+/* Estilos para la sección del banner principal */
+.hero-banner {
+    display: flex; /* Flexbox para organización */
+    align-items: center; /* Alineación vertical al centro */
+    justify-content: center; /* Alineación horizontal al centro */
+    background-image: url('/Assets/Back-moto-hero.jpeg'); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center; /* Centro de la imagen de fondo */
+    padding: 50px 0; /* Relleno vertical */
+    color: white; /* Color del texto */
+}
+
+/* Estilo para la imagen del hero */
+.hero-image {
+    width: 40vw; /* Ancho relativo al viewport */
+    max-width: 600px; /* Ancho máximo */
+    height: auto; /* Alto automático */
+}
+
+/* Estilo para el contenido del hero */
+.hero-content {
+    color: white; /* Color del texto */
+    text-align: left; /* Alineación a la izquierda */
+    margin-left: 20px; /* Margen izquierdo */
+}
+
+/* Estilo para el título del hero */
+.hero-content h1 {
+    font-size: 3rem; /* Tamaño de la fuente */
+    margin-bottom: 1rem; /* Margen inferior */
+}
+
+/* Estilo para la lista del hero */
+.hero-content ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin relleno */
+}
+
+/* Estilo para los elementos de la lista del hero */
+.hero-content li {
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+/* Definición de la animación de latido */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.1); /* Tamaño aumentado */
+    }
+}
+
+/* Aplicación de la animación al botón del hero */
+.hero-button {
+    margin-top: 2.5rem; /* Margen superior */
+    background-color: #ff6e6c; /* Color de fondo */
+    color: #1f1235; /* Color del texto */
+    animation: heartbeat 1.5s infinite; /* Animación de latido */
+}
+
+/* Estilo para los botones */
+.button {
+    padding: 1.2rem 2rem; /* Relleno interno */
+    border-radius: 3px; /* Bordes redondeados */
+    font-size: 1.1rem; /* Tamaño de la fuente */
+    font-weight: 700; /* Grosor de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Responsive del Banner */
+@media (max-width: 768px) {
+    .hero-banner {
+        flex-direction: column; /* Organización en columna */
+        padding: 20px; /* Relleno interno */
+    }
+
+    .hero-image {
+        width: 80vw; /* Ancho relativo al viewport */
+        max-width: none; /* Sin ancho máximo */
+    }
+
+    .hero-content {
+        margin-left: 0; /* Sin margen izquierdo */
+        text-align: center; /* Texto centrado */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Tamaño de la fuente */
+    }
+
+    .hero-content li {
+        font-size: 1.2rem; /* Tamaño de la fuente */
+    }
+
+    .hero-button {
+        margin-top: 1.5rem; /* Margen superior */
+    }
+}
+
+/* Contenedor del quienes somos, formulario y iframe del mapa */
+.contenedor-principal {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los hijos se envuelvan */
+    padding: 20px; /* Relleno interno */
+    background-color: #f0f8ff; /* Color de fondo */
+    border: 2px solid #00bfff; /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px; /* Margen externo */
+    box-sizing: border-box; /* Incluye padding y border en el total del ancho y alto */
+}
+
+.contenedor1, .contenedor2 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los hijos se envuelvan */
+    justify-content: space-between; /* Distribuye el espacio entre los hijos */
+    margin: 10px; /* Margen externo */
+    flex-basis: 100%; /* Ancho completo */
+}
+
+section {
+    background-color: #f8f8f8; /* Color de fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px; /* Relleno interno */
+    margin-bottom: 20px; /* Margen inferior */
+    flex: 1; /* Flexibilidad */
+    margin-right: 10px; /* Margen derecho */
+    box-sizing: border-box; /* Incluye padding y border en el total del ancho y alto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.mapa {
+    width: 100%; /* Ancho completo */
+    height: 550px; /* Alto fijo */
+}
+
+/* Responsive de los contenedores */
+@media (max-width: 768px) {
+    .contenedor1, .contenedor2 {
+        flex-direction: column; /* Organización en columna */
+    }
+
+    section {
+        margin-right: 0; /* Sin margen derecho */
+        margin-bottom: 20px; /* Margen inferior */
+        width: 100%; /* Ancho completo */
+    }
+}
+
+/* Estilo para los inputs y botones del formulario y la tabla del popup */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Relleno interno */
+    margin-bottom: 10px; /* Margen inferior */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye padding y border en el total del ancho y alto */
+}
+
+input[type="submit"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Relleno interno */
+    background-color: #00bfff; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+input[type="submit"]:hover {
+    background-color: #009acd; /* Color de fondo más oscuro al pasar el cursor */
+}
+
+legend {
+    color: #666; /* Color del texto */
+    text-align: center; /* Texto centrado */
+    font-size: 14px; /* Tamaño de la fuente */
+    margin-bottom: 20px; /* Margen inferior */
+    width: 100%; /* Ancho completo */
+}
+
+input[type="range"] {
+    width: 100%; /* Ancho completo */
+}
+
+h2 {
+    color: #ff6347; /* Color del título */
+    text-align: center; /* Texto centrado */
+}
+
+p, label {
+    color: #666; /* Color del texto */
+    text-align: center; /* Texto centrado */
+    font-size: 14px; /* Tamaño de la fuente */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapsa bordes */
+}
+
+table th, table td {
+    border: 1px solid #ccc; /* Borde de las celdas */
+    padding: 10px; /* Relleno interno */
+    text-align: center; /* Texto centrado */
+}
+
+button {
+    padding: 10px 15px; /* Relleno interno */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-top: 10px; /* Margen superior */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo más oscuro al pasar el cursor */
+}
+
+/* Estilos de los popups del video y de la tabla showdata */
+/* Este es el del video */
+#videoPopup {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste de posición */
+    z-index: 1000; /* Prioridad en el apilamiento */
+    background-color: white; /* Fondo blanco */
+    padding: 20px; /* Relleno interno */
+    border: 1px solid #ccc; /* Borde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    max-width: 90%; /* Ancho máximo */
+    max-height: 90%; /* Alto máximo */
+    overflow: hidden; /* Oculta desbordamientos */
+    box-sizing: border-box; /* Incluye padding y border en el total del ancho y alto */
+    text-align: center; /* Texto centrado */
+}
+
+/* Contenedor responsivo para el iframe */
+#videoPopup .video-container {
+    position: relative; /* Posición relativa */
+    width: 100%; /* Ancho completo */
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0; /* Altura cero */
+    overflow: hidden; /* Oculta desbordamientos */
+}
+
+#videoPopup .video-container iframe {
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Desde arriba */
+    left: 0; /* Desde la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    border: 0; /* Sin borde */
+}
+
+.close-btn {
+    background: #ff0000; /* Fondo rojo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Relleno interno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    z-index: 1000; /* Prioridad en el apilamiento */
+    font-size: 16px; /* Tamaño de la fuente */
+    position: absolute; /* Posición absoluta */
+    top: 10px; /* Desde arriba */
+    right: 10px; /* Desde la derecha */
+}
+
+/* Este es el popup de la tabla  */
+#popup {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija */
+    left: 50%; /* Centrado horizontalmente */
+    top: 50%; /* Centrado verticalmente */
+    transform: translate(-50%, -50%); /* Ajuste de posición */
+    background: white; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde */
+    padding: 20px; /* Relleno interno */
+    z-index: 1000; /* Prioridad en el apilamiento */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 90%; /* Ancho máximo */
+    max-height: 90%; /* Alto máximo */
+    overflow-y: auto; /* Scroll vertical */
+    box-sizing: border-box; /* Incluye padding y border en el total del ancho y alto */
+}
+
+/* Responsive de los popups para pantallas chicas */
+@media (max-width: 768px) {
+    #videoPopup, #popup {
+        width: 90%; /* Ancho del 90% */
+        height: auto; /* Altura automática */
+        top: 5%; /* Desde arriba */
+        left: 5%; /* Desde la izquierda */
+        transform: translate(0, 0); /* Ajuste de posición */
+    }
+
+    /* Ajustes adicionales para asegurar que el contenido se vea bien en pantallas pequeñas */
+    #videoPopup {
+        padding: 10px; /* Relleno interno */
+    }
+
+    #popup {
+        padding: 10px; /* Relleno interno */
+    }
+}
+
+/* Responsive de los popups para pantallas grandes */
+@media (min-width: 769px) {
+    #videoPopup {
+        width: 95%; /* Ancho del 95% */
+        height: 80%; /* Alto del 80% */
+    }
+
+    #videoPopup .video-container {
+        padding-bottom: 0; /* Sin proporción */
+        width: 100%; /* Ancho completo */
+        height: 100%; /* Alto completo */
+    }
+
+    #videoPopup .video-container iframe {
+        width: 100%; /* Ancho completo */
+        height: 100%; /* Alto completo */
+    }
+}
