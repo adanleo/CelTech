@@ -48,9 +48,11 @@
         </div>
     </section>
 
-    <div id="videoPopup" class="popup">
-        <iframe width="640" height="360" src="https://www.youtube.com/watch?v=RC8ujMF_buk" frameborder="0" allow="autoplay; fullscreen"></iframe>
-        <button onclick="cerrarPopup()">Cerrar</button>
+    <div id="videoPopup">
+        <button onclick="cerrarPopup()" class="close-btn">Cerrar</button>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/RC8ujMF_buk" frameborder="0" allow="autoplay; fullscreen"></iframe>
+        </div>
     </div>
     
     <div class="contenedor-principal">
@@ -84,16 +86,16 @@
                 <p>¡Contáctanos hoy y recibe una respuesta en 24 horas!</p>
                 <form id="contactForm">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Nombre">
+                        <input type="text" name="Nombre" placeholder="Nombre">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Correo Electrónico">
+                        <input type="text" name="Apellido" placeholder="Apellido">
                     </div>
                     <div class="form-group">
-                        <input type="tel" name="phone" placeholder="Teléfono">
+                        <input type="tel" name="Telefono" placeholder="Teléfono">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="website" placeholder="Sitio Web">
+                        <input type="email" name="Email" placeholder="Email">
                     </div>
                     <div class="form-group">
                         <fieldset>
@@ -118,7 +120,7 @@
                         <input type="radio" name="Preferencia" value="OTRO">OTRO
                     </p>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Mensaje"></textarea>
+                        <textarea name="Mensaje" placeholder="Mensaje"></textarea>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Enviar">
