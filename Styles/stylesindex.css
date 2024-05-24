@@ -63,6 +63,9 @@ html {
 
 /* Responsive del header*/
 @media (max-width: 768px) {
+    .botonera {
+        flex-direction: column;
+    }
     .nav {
         display: none; /* Oculta la navegación */
         flex-direction: column; /* Organización en columna */
@@ -168,6 +171,15 @@ html {
     .hero-banner {
         flex-direction: column; /* Organización en columna */
         padding: 20px; /* Relleno interno */
+    }
+
+    .popover {
+        transform: translate(-50%, -110%); /* Mueve el elemento para centrarlo mejor */
+    }
+
+    .popover img {
+        height: 200px;
+        width: 400px;
     }
 
     .hero-image {

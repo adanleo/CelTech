@@ -9,17 +9,17 @@
 	<link rel="stylesheet" href="../Styles/stylesindex.css">
 </head>
 
-<body>
+<body translate="yes">
 	<header id="Inicio" class="header">
-		<a href="/index.html" style="float: left">
+		<a href="/index.html" class="logo">
 			<img src="../Assets/CELTECH.png" alt="Logo" class="logo-img" />
 		</a>
 		<nav class="nav">
-			<a href="../index.html" class="nav-link">Inicio</a>
-			<a href="quienes somos.html" class="nav-link">Acerca de</a>
-			<a href="contacto.html" class="nav-link">Contacto</a>
-			<a href="usuario.html" class="nav-link">Registrese</a>
-			<a href="sucursales.html" class="nav-link">Sucursales</a>
+			<a href="../index.html#inicio" class="nav-link">Inicio</a>
+			<a href="../index.html#quienes-somos" class="nav-link">Acerca de</a>
+			<a href="../index.html#contacto" class="nav-link">Contacto</a>
+			<a href="../index.html#sucursales" class="nav-link">Sucursales</a>
+			<a href="#" class="nav-link">Tienda</a>
 		</nav>
 		<div class="menu-toggle">
 			<span class="bar"></span>
@@ -27,6 +27,37 @@
 			<span class="bar"></span>
 		</div>
 	</header>
+	<div class="banner">
+		<div class="capa"></div>
+		<div class="info">
+			<h1>BLACK FRIDAY</h1>
+			<a href="../index.html#contacto">Contacto</a>
+			<p></p>
+		</div>
+		<div class="bota">www.celtech.com</div>
+	</div>
+	<div class="botonera">
+		<div class="button-container">
+			<button id="popoverButton3">Medios de Pago</button>
+			<div id="popover1" class="popover"><img src="../Assets/imagenbanner/form_pago.jpeg" .jpeg alt="entrega">
+			</div>
+		</div>
+		<div class="button-container">
+			<button id="popoverButton3">Forma de Entrega</button>
+			<div id="popover2" class="popover"><img src="../Assets/imagenbanner/form_entrega.jpeg" .jpeg alt="entrega">
+			</div>
+		</div>
+		<div class="button-container">
+			<button id="popoverButton3">Seguimiento del Pedido</button>
+			<div id="popover3" class="popover"><img src="../Assets/imagenbanner/seguimiento.jpeg" .jpeg alt="pedido">.
+			</div>
+		</div>
+		<div class="button-container">
+			<button id="popoverButton3">¿Cómo comprar?</button>
+			<div id="popover4" class="popover"><img src="../Assets/imagenbanner/como_comprar.jpeg" .jpeg alt="Compra">
+			</div>
+		</div>
+	</div>
 	<section class="celulares">
 		<div class="equipo">
 			<img src="../Assets/celulares/samsung a14.webp">
@@ -148,29 +179,26 @@
 				<img src="../Assets/github-svgrepo-com.svg" width="30px" height="30px" alt="Github logo">
 			</a>
 			<a href="">
-				<img src="../Assets/instagram-svgrepo-com.svg" width="30px" height="30px"
-					alt="Instagram logo">
+				<img src="../Assets/instagram-svgrepo-com.svg" width="30px" height="30px" alt="Instagram logo">
 			</a>
 			<a href="">
-				<img src="../Assets/linkedin-svgrepo-com.svg" width="30px" height="30px"
-					alt="Linkedin logo">
+				<img src="../Assets/linkedin-svgrepo-com.svg" width="30px" height="30px" alt="Linkedin logo">
 			</a>
 			<a href="">
-				<img src="../Assets/facebook-svgrepo-com.svg" width="30px" height="30px"
-					alt="Facebook logo">
+				<img src="../Assets/facebook-svgrepo-com.svg" width="30px" height="30px" alt="Facebook logo">
 			</a>
 		</div>
 		<p style="text-align: center; color: #001e1d">© 2024 · CellTech</p>
 	</footer>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('.nav');
-    
-        menuToggle.addEventListener('click', function () {
-            nav.classList.toggle('active');
-        });
-    });
+			const menuToggle = document.querySelector('.menu-toggle');
+			const nav = document.querySelector('.nav');
+
+			menuToggle.addEventListener('click', function () {
+				nav.classList.toggle('active');
+			});
+		});
 	</script>
 </body>
 
