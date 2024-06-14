@@ -17,7 +17,7 @@ html {
     display: flex; /* Flexbox para organización */
     align-items: center; /* Alineación vertical al centro */
     justify-content: center; /* Alineación horizontal al centro */
-    background-image: url('/Assets/Back-moto-hero.jpeg'); /* Imagen de fondo */
+    background-image: url('../Assets/Back-moto-hero.jpeg'); /* Imagen de fondo */
     background-size: cover; /* Cubre todo el contenedor */
     background-position: center; /* Centro de la imagen de fondo */
     padding: 50px 0; /* Relleno vertical */
