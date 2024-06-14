@@ -31,7 +31,7 @@ header, footer {
     justify-content: center; /* Centra los elementos verticalmente */
     margin: 15px; /* Margen alrededor del contenedor */
     padding: 15px; /* Relleno interno del contenedor */
-    background-image: url("Imagen de WhatsApp 2024-04-27 a las 23.55.42_e07b1cf8.jpg"); /* Imagen de fondo */
+    background-image: url("/Assets/celulares/celtech-grid.jpg"); /* Imagen de fondo */
     background-size: cover; /* Ajusta la imagen de fondo para cubrir el contenedor */
     background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
     background-position: center center; /* Centra la imagen de fondo */
