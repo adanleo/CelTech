@@ -9,31 +9,37 @@
     <!-- Vinculamos el archivo CSS -->
     <link rel="stylesheet" href="../Styles/Celtech.css">
     <link rel="stylesheet" href="/Styles/stylesindex.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>CellTech</title>
 </head>
 
 <body translate="yes">
     <!-- Sección de cabecera -->
-    <header id="Inicio" class="header">
-        <!-- Logo de la empresa -->
-        <a href="#" class="logo">
-            <img src="Assets/CELTECH.png" alt="Logo" class="logo-img"/>
-        </a>
-        <!-- Navegación del sitio -->
-        <nav class="nav">
-            <a href="#Inicio" class="nav-link">Inicio</a>
-            <a href="#quienes-somos" class="nav-link">Acerca de</a>
-            <a href="#contacto" class="nav-link">Contacto</a>
-            <a href="#sucursales" class="nav-link">Sucursales</a>
-            <a href="Pages/tienda.html" class="nav-link">Tienda</a>
-        </nav>
-        <!-- Botón de menú para responsive -->
-        <div class="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="/Assets/CELTECH.png" alt="" height="80px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pages/tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sucursales">Sucursales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#quienes-somos">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
         </div>
-    </header>
+    </nav>
     
     <!-- Sección del banner principal -->
     <section class="hero-banner">
@@ -176,17 +182,22 @@
         <p style="text-align: center; color: #001e1d">© 2024 · CellTech</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <!-- Script para el menú responsive -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+
+    /*  document.addEventListener('DOMContentLoaded', function () {
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('.nav');
     
         menuToggle.addEventListener('click', function () {
             nav.classList.toggle('active');
         });
-    });
-
+    }); */
+    
     document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evitar la recarga de la página
 

@@ -8,25 +8,35 @@
 	<link rel="icon" href="/Assets/CELTECH.png">
 	<link rel="stylesheet" href="../Styles/Celtech.css">
 	<link rel="stylesheet" href="../Styles/stylesindex.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body translate="yes">
-	<header id="Inicio" class="header">
-		<a href="/index.html" class="logo">
-			<img src="../Assets/CELTECH.png" alt="Logo" class="logo-img" />
-		</a>
-		<nav class="nav">
-			<a href="../index.html#inicio" class="nav-link">Inicio</a>
-			<a href="../index.html#quienes-somos" class="nav-link">Acerca de</a>
-			<a href="../index.html#contacto" class="nav-link">Contacto</a>
-			<a href="../index.html#sucursales" class="nav-link">Sucursales</a>
-			<a href="#" class="nav-link">Tienda</a>
-		</nav>
-		<div class="menu-toggle">
-			<span class="bar"></span>
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html"><img src="../Assets/CELTECH.png" alt="" height="80px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#sucursales">Sucursales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#quienes-somos">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 	</header>
 	<div class="banner">
 		<div class="capa"></div>
@@ -191,6 +201,11 @@
 		</div>
 		<p style="text-align: center; color: #001e1d">© 2024 · CellTech</p>
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 			const menuToggle = document.querySelector('.menu-toggle');
