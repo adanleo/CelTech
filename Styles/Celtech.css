@@ -17,56 +17,6 @@ header, footer {
     width: 100%; /* El ancho del header y footer es del 100% */
 }
 
-.celulares {
-    display: grid; /* Usa CSS Grid para organizar el contenido */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Crea columnas flexibles */
-    grid-gap: 2px; /* Espacio entre los elementos de la cuadrícula */
-    padding: 20px; /* Relleno interno de la cuadrícula */
-}
-
-.equipo {
-    display: flex; /* Usa Flexbox para organizar el contenido */
-    flex-direction: column; /* Ordena los elementos hijos en una columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-    margin: 15px; /* Margen alrededor del contenedor */
-    padding: 15px; /* Relleno interno del contenedor */
-    background-image: url("../Assets/celulares/celtech-grid.jpg"); /* Imagen de fondo */
-    background-size: cover; /* Ajusta la imagen de fondo para cubrir el contenedor */
-    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
-    background-position: center center; /* Centra la imagen de fondo */
-    background-color: #494545; /* Color de fondo */
-    border-radius: 10px; /* Bordes redondeados */
-    border-color: rgba(96, 100, 93, 0.333);
-    border-style: solid;
-    box-shadow: 0 8px 16px rgba(65, 65, 64, 0.795); /* Sombra del contenedor */
-    overflow: hidden; /* Oculta el contenido que se desborda */
-    transition: transform 0.5s ease-in-out; /* Transición suave al transformar el contenedor */
-}
-
-.equipo img {
-    max-width: 100%; /* Ancho máximo de la imagen */
-    height: auto; /* Altura automática para mantener la proporción */
-    object-fit: cover; /* Cubre el área del contenedor sin distorsionar */
-    transition: transform 0.2s ease-in-out; /* Transición suave al transformar la imagen */
-}
-
-.equipo:hover img {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón */
-}
-
-.textos {
-    padding-top: 5px; /* Relleno superior */
-    text-align: center; /* Alineación del texto al centro */
-}
-
-.modelos, .precios, .Cuotas {
-    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; /* Familia de fuentes */
-    font-weight: bold; /* Texto en negrita */
-    text-shadow: 2px 2px 10px rgba(0, 200, 255, 1); /* Sombra del texto */
-    color: black; /* Color del texto */
-    margin: 10px 0; /* Margen superior e inferior */
-}
 
 footer {
     padding: 10px 0; /* Relleno superior e inferior */
@@ -236,6 +186,12 @@ footer a img {
     opacity: 1; /* Hace el elemento totalmente opaco */
     background-color: #1d68b3; /* Cambia el color de fondo al pasar el ratón */
     border-color: #fefeff; /* Cambia el color del borde al pasar el ratón */
+}
+
+@media (max-width: 600px){
+    .botonera {
+        flex-direction: column;
+    }
 }
 
 

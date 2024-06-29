@@ -8,7 +8,9 @@
 	<link rel="icon" href="/Assets/CELTECH.png">
 	<link rel="stylesheet" href="../Styles/Celtech.css">
 	<link rel="stylesheet" href="../Styles/stylesindex.css">
+	<link rel="stylesheet" href="../Styles/Stylestienda.css">
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 
 <body translate="yes">
@@ -69,120 +71,32 @@
 			</div>
 		</div>
 	</div>
-	<section class="celulares">
-		<div class="equipo">
-			<img src="../Assets/celulares/samsung a14.webp">
-			<div class="textos">
-				<p Class="modelos"> Samsung Galaxy A14 128GB 5G</p>
-				<p class="precios"> $429.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-			</div>
-		</div>
+	
+	<div id="app">
+        <div class="tarjeta" v-for="celular in celulares" :key="celular.modelo">
+          <img :src="celular.imagen" alt="Imagen del celular">
+          <h3>{{ celular.marca }}</h3>
+          <h3>{{ celular.modelo }}</h3>
+          <details>
+            <summary>Ver caracteristicas</summary>
+            <p>Procesador: {{ celular.procesador }}, RAM: {{ celular.ram }}, Memoria Interna: {{ celular.memoriaInterna }}, Cámara: {{ celular.camara }}, Batería: {{ celular.bateria }}</p>
+          </details>
+          <span>${{ celular.precio }}</span>
+          <button @click="agregarAlCarrito(celular)">Agregar al Carrito</button>
+        </div>
+        <div id="carrito">
+            <button @click="mostrarCarrito = !mostrarCarrito">
+                <img src="../Assets/celulares/carrito.png" alt="" height="30px">
+                <h3>Total: ${{ totalCarrito }}</h3>
+            </button>
+            <div v-if="mostrarCarrito" v-for="item in carrito" :key="item.modelo" class="item-carrito">
+                <h3>{{ item.marca }} {{ item.modelo }}</h3>
+                <p>Precio: ${{ item.precio }}</p>
+				<button id="botonQuitar" @click="quitarDelCarrito(item)">Quitar del Carrito</button>
+            </div>
+        </div>
+      </div>
 
-		<div class="equipo">
-			<img src="../Assets/celulares/SAmsung A54.webp">
-			<div class="textos">
-				<p class="modelos"> Samsung Galaxy A54 256GB 5G</p>
-				<p class="precios"> $919.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-			</div>
-		</div>
-
-
-		<div class="equipo">
-			<img src="../Assets/celulares/Samsung Zflip 5.png">
-			<div class="textos">
-				<p class="modelos"> Samsung Galaxy ZFip 5 256GB 5G</p>
-				<p class="precios"> $1.899.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-			</div>
-		</div>
-		<div class="equipo">
-			<img src="../Assets/celulares/SAmsung Z fold.webp">
-			<div class="textos">
-				<p class="modelos"> Samsung Galaxy Z Fold5 5G 512GB con Buds2</p>
-				<p class="precios"> $999.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-			</div>
-		</div>
-		<div class="equipo">
-			<img src="../Assets/celulares/Moto g14.webp">
-			<div class="textos">
-				<p class="modelos"> Moto G14 128GB</p>
-				<p class="precios"> $195.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-			</div>
-		</div>
-		<div class="equipo">
-			<img src="../Assets/celulares/motorola edge 40.webp">
-			<div class="textos">
-				<p class="modelos"> Motorola Edge 40 Neo 5G 256GB</p>
-				<p class="precios"> $769.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-			</div>
-		</div>
-		<div class="equipo">
-			<img src="../Assets/celulares/motorola edge 40 con control.webp">
-			<div class="textos">
-				<p class="modelos"> Motorola Edge 40 Pro 5G 256GB con Control</p>
-				<p class="precios"> $869.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-			</div>
-		</div>
-		<div class="equipo">
-			<img src="../Assets/celulares/motorola razr 40 ultra.webp">
-			<div class="textos">
-				<p class="modelos"> Motorola Razr 40 Ultra 5G 512GB</p>
-				<p class="precios"> $1.799.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-			</div>
-		</div>
-
-
-		<div class="equipo">
-			<img src="../Assets/celulares/Zte Blade A33.png">
-			<div class="textos">
-				<p class="modelos"> Zte Blade A33 Negro 1GB 32GB</p>
-				<p class="precios"> $149.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-
-			</div>
-		</div>
-		<div class="equipo">
-			<img src="../Assets/celulares/Zte A72s.png">
-			<div class="textos">
-				<p class="modelos"> Zte A72s 4GB 128GB</p>
-				<p class="precios"> $179.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-
-			</div>
-		</div>
-		<div class="equipo">
-			<img src="../Assets/celulares/Xiaomi redmi 10C.png">
-			<div class="textos">
-				<p class="modelos"> Xiaomi Redmi 10C Green 4GB 128GB</p>
-				<p class="precios"> $249.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-
-
-			</div>
-		</div>
-		<div class="equipo">
-			<img src="../Assets/celulares/Xiaomi REdmi note 11.webp">
-			<div class="textos">
-				<p class="modelos"> Xiaomi Redmi Note 11 Negro 4GB 128GB 4g</p>
-				<p class="precios"> $299.999</p>
-				<p class="Cuotas"> Hasta 6 Cuotas con mucho interes </p>
-			</div>
-		</div>
-
-
-
-
-		<div class="restaurar"></div>
-	</section>
-
-	</main>
 
 	<footer style="background-color: #eff0f3;">
 		<div style="display: flex; justify-content: center;">
@@ -202,6 +116,7 @@
 		<p style="text-align: center; color: #001e1d">© 2024 · CellTech</p>
 	</footer>
 
+	<script src="../JS/tienda.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
