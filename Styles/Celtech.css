@@ -188,5 +188,11 @@ footer a img {
     border-color: #fefeff; /* Cambia el color del borde al pasar el ratón */
 }
 
+@media (max-width: 600px){
+    .botonera {
+        flex-direction: column;
+    }
+}
+
 
 

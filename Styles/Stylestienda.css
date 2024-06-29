@@ -19,6 +19,7 @@ body {
 
 .tarjeta {
     position: relative;
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -31,12 +32,15 @@ body {
 
 .tarjeta img {
     width: 100%;
-    height: 70%;
+    height: auto;
 }
+
+.tarjeta details {
+    margin-top: 10px;
+  }
 
 .tarjeta h3 {
     font-size: 2em;
-    text-align: center;
     color: #1f1135;
     margin-top: 1px;
     margin-bottom: 1px;
@@ -46,7 +50,6 @@ body {
 .tarjeta p {
     font-size: 0.9em;
     padding-bottom: 5px;
-    text-align: center;
     color: #1b1325;
 }
 
@@ -111,17 +114,48 @@ body {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        padding: 2%;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .tarjeta {
-        flex: 0 1 100%;
-    }
-
-    #carrito {
-        top: 12%;
-    }
-
-    #carrito > button h3 {
-        display: none;
-    }
+        margin: 5px;
+        padding: 5px;
+      }
+    
+      #carrito {
+        position: fixed;
+        width: 100%;
+        right: 0;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        border-radius: 0;
+      }
+    
+      #carrito button {
+        width: 100%;
+        justify-content: center;
+      }
+    
+      .item-carrito {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .item-carrito h3 {
+        font-size: 14px;
+      }
+    
+      .item-carrito p {
+        font-size: 12px;
+      }
+    
+      .item-carrito button {
+        font-size: 12px;
+        padding: 5px;
+      }
 }
